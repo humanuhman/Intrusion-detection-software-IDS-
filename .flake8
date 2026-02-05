@@ -1,0 +1,27 @@
+[flake8]
+# Maximum line length
+max-line-length = 100
+
+# Directories to exclude from linting
+exclude = 
+    venv,
+    env,
+    .venv,
+    __pycache__,
+    .git,
+    .pytest_cache,
+    *.egg-info,
+    build,
+    dist
+
+# Error codes to ignore
+# E501: line too long (handled by max-line-length)
+# W503: line break before binary operator (conflicts with PEP8)
+# E203: whitespace before ':' (conflicts with black formatter)
+ignore = E501,W503,E203
+
+# Show source code for each error
+show-source = True
+
+# Count the number of occurrences of each error/warning code
+count = True
